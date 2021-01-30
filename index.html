@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curise Booking</title>
+    <!-- Fonts -->
+    <script src="https://kit.fontawesome.com/af4a266d96.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--Header and Menu Section-->
+    <header class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a class="active" href="#">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+<!--Header and Menu end-->
+    <!--Booking Section-->
+    <main class="main-content container">
+
+        <div class="booking-content" id="booking">
+            <h1>Cruise Queen</h1>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+        </div>
+
+
+        <div class="booking-form" id="bookingFrom">
+            <h3>Book Ocean Time</h3>
+            <div class="input-group">
+                <label for="">Flying From</label>
+                <select name="" class="select-country">
+                    <option value="">Dhaka, Bangladesh</option>
+                    <option value="">New Delhi, India</option>
+                    <option value="">Kathmandu, Nepal</option>
+                    <option value="">Thimphu, Bhutan</option>
+                    <option value="">Colombo, Sree lanka</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="">Flying To</label>
+                <select name="" class="select-country" >
+                    <option value="">USA</option>
+                    <option value="">London</option>
+                    <option value="">China</option>
+                    <option value="">Pakistan</option>
+                    <option value="">Korea</option>
+                </select>
+            </div>
+            <div class="inputs">
+                <div class="input-group">
+                    <label" for="">Departure</label>
+                    <input class="inp-style" type="date" name="">
+                </div>
+                <div class="input-group">
+                    <label for="">Return</label>
+                    <input class="inp-style" type="date" name="">
+                </div>
+            </div>
+            <div class="input-group f-class">
+                <div>
+                    <label for="">First Class ($150)</label>
+                    <input class="inp-style inp-width" type="number" id="firstClassCounter"  value="0">
+                </div>
+                <div class="plus-minus-btn">
+                    <button class="inputBtn" id="increaseVolume1"><i class="fas fa-plus"></i></button>
+                    <button class="inputBtn" id="decreaseVolume1"><i class="fas fa-minus"></i></button>
+                </div>
+            </div>
+            
+            <div class="input-group f-class">
+                <div>
+                    <label for="">Economy ($100)</label>
+                    <input id="economyCounter" value="0" class="inp-style inp-width" type="number" name="" >
+                </div>
+                <div class="plus-minus-btn">
+                    <button class="inputBtn" id="increaseVolume2"><i class="fas fa-plus"></i></button>
+                    <button class="inputBtn" id="decreaseVolume2"><i class="fas fa-minus"></i></button>
+                </div>
+            </div>
+            <div class="calculations">
+                <div class="amount">
+                    <div class="left">
+                        <p>Subtotal</p>
+                    </div>
+                    <div class="right">
+                        <p>$ <span id="subtotal">000</span></p>
+                    </div>
+                </div>
+
+                <div class="amount">
+                    <div class="left">
+                        <p>Charge 10% VAT</p>
+                    </div>
+                    <div class="right">
+                        <p >$ <span id="vat">00</span></p>
+                    </div>
+                </div>
+                <hr>
+                <div class="amount">
+                    <div class="left">
+                        <h4>Total</h4>
+                    </div>
+                    <div class="right">
+                        <p>$ <span id="total">000</span> </p>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-style" id="bookNow">Book Now</button>
+        </div>
+        <!--Booking Section end-->
+        <!-- confirmation  message section-->
+        <div id="Massage">
+            <div class="heading">
+                <h3>Please!! Checked it out</h3>
+            </div>
+            <div class="message">
+                <p>Confirmation message:</p>
+            </div>
+            <div class="allDetail">
+                <div class="allDetailWrapper">
+                    <div class="content">
+                        <p>First Class Passenger:</p>
+                    </div>
+                    <div class="value">
+                        <p id="firstClassPassenger">0</p>
+                    </div>
+                </div>
+                <div class="allDetailWrapper">
+                    <div class="content">
+                        <p>Economy Class Passenger:</p>
+                    </div>
+                    <div class="value">
+                        <p id="economyPassenger">0</p>
+                    </div>
+                </div>
+                <div class="allDetailWrapper">
+                    <div class="content">
+                        <p>Subtotal:</p>
+                    </div>
+                    <div class="value">
+                        <p>$ <span id="subCost">00</span></p>
+                    </div>
+                </div>
+                <div class="allDetailWrapper">
+                    <div class="content">
+                        <p>Charge 10% VAT</p>
+                    </div>
+                    <div class="value">
+                        <p>$ <span id="vatCost">00</span></p>
+                    </div>
+                </div>
+                <hr>
+                <div class="allDetailWrapper">
+                    <div class="content">
+                        <p>Total</p>
+                    </div>
+                    <div class="value">
+                        <p>$ <span id="totalCost">00</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="allDetailWrapper">
+               <button id="submit">OK</button>
+            </div>
+        </div>
+     <!-- confirmation  message section end-->
+    </main>
+    <script src="Js/index.js"></script>
+</body>
+
+</html>
